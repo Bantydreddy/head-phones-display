@@ -1,25 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HeadZone | Wireless headphones in three colours</title>
+  <meta name="description" content="HeadZone over-ear wireless headphones. Style meets sound, in orange, grey and green.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="main-container">
-        <div><img src="images/orange.png" alt=""></div>
-        <div><img src="images/grey.png" alt=""></div>
-       <div><img src="images/green.png" alt=""></div>
-    </div>
+  <header class="nav">
+    <a class="logo" href="#top">HeadZone</a>
+    <nav aria-label="Main">
+      <a href="#colours">Colours</a>
+      <a href="#features">Features</a>
+      <a href="#reviews">Reviews</a>
+    </nav>
+    <a class="btn small" href="#waitlist">Join the waitlist</a>
+  </header>
 
-    <div class="msg">
-        <div>Feel the Beat</div>
-        <span>Style Meets Sound</span><br>
-        <span>Welcome to HeadZone</span>
+  <main id="top">
+    <section class="hero" id="hero" data-theme="orange">
+      <div class="hero-text">
+        <h1>Feel the Beat</h1>
+        <p class="lead">Style meets sound. Over-ear wireless headphones with 40 hours of playback, in three colours.</p>
+        <div class="cta-row">
+          <a class="btn" href="#colours">See the colours</a>
+          <div class="swatches" role="group" aria-label="Choose a colour">
+            <button class="swatch s-orange" data-theme="orange" aria-label="Sunrise orange" aria-pressed="true"></button>
+            <button class="swatch s-grey" data-theme="grey" aria-label="Stone grey" aria-pressed="false"></button>
+            <button class="swatch s-green" data-theme="green" aria-label="Forest green" aria-pressed="false"></button>
+          </div>
+        </div>
       </div>
-      
+      <div class="hero-img">
+        <img class="show" data-theme="orange" src="images/orange.webp" width="800" height="1200" alt="Orange HeadZone headphones">
+        <img data-theme="grey" src="images/grey.webp" width="800" height="1200" alt="Grey HeadZone headphones">
+        <img data-theme="green" src="images/green.webp" width="800" height="1200" alt="Green HeadZone headphones">
+      </div>
+    </section>
+
+    <section class="section" id="colours">
+      <h2>Pick your colour</h2>
+      <div class="lineup">
+        <article class="product p-orange">
+          <img src="images/orange.webp" width="800" height="1200" loading="lazy" alt="Sunrise orange headphones">
+          <h3>Sunrise</h3>
+          <p>Warm orange with a soft-touch finish. Hard to lose in a bag.</p>
+          <p class="price">KSh 8,500</p>
+          <a class="btn small" href="#waitlist">Join the waitlist</a>
+        </article>
+        <article class="product p-grey">
+          <img src="images/grey.webp" width="800" height="1200" loading="lazy" alt="Stone grey headphones">
+          <h3>Stone</h3>
+          <p>A quiet neutral that goes with everything you own.</p>
+          <p class="price">KSh 8,500</p>
+          <a class="btn small" href="#waitlist">Join the waitlist</a>
+        </article>
+        <article class="product p-green">
+          <img src="images/green.webp" width="800" height="1200" loading="lazy" alt="Forest green headphones">
+          <h3>Forest</h3>
+          <p>Deep green with a leather-look headband.</p>
+          <p class="price">KSh 9,200</p>
+          <a class="btn small" href="#waitlist">Join the waitlist</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section alt" id="features">
+      <h2>Built for long listening</h2>
+      <dl class="features">
+        <div><dt>40-hour battery</dt><dd>A full week of commutes on one charge, and 10 minutes of charging gives you 5 hours.</dd></div>
+        <div><dt>Active noise cancelling</dt><dd>Cuts engine rumble and chatter so you can hear the quiet parts of a track.</dd></div>
+        <div><dt>Folds flat</dt><dd>The hinges fold the earcups in, so they fit in a backpack side pocket.</dd></div>
+        <div><dt>Connects to two devices</dt><dd>Bluetooth 5.3 lets you switch between your phone and laptop without re-pairing.</dd></div>
+      </dl>
+    </section>
+
+    <section class="section" id="reviews">
+      <h2>What early listeners say</h2>
+      <div class="reviews">
+        <blockquote><p>The battery is the real story. I charged it once and forgot about it for days.</p><footer>Amina, Mombasa</footer></blockquote>
+        <blockquote><p>Noise cancelling on the matatu is better than I expected for the price.</p><footer>Brian, Nairobi</footer></blockquote>
+        <blockquote><p>The grey ones look expensive and the earcups stay comfortable for hours.</p><footer>Wanjiru, Kisumu</footer></blockquote>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="waitlist">
+    <div>
+      <h2>Be first to know</h2>
+      <p>Leave your email and we will tell you when HeadZone is in stock.</p>
+    </div>
+    <form id="signup" novalidate>
+      <label for="email">Email address</label>
+      <div class="row">
+        <input id="email" type="email" placeholder="you@example.com" autocomplete="email" required>
+        <button class="btn" type="submit">Join the waitlist</button>
+      </div>
+      <p id="signup-msg" role="status"></p>
+    </form>
+    <p class="legal">&copy; <span id="year">2026</span> HeadZone. A portfolio project.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
